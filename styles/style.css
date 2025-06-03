@@ -1,0 +1,781 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.dela-gothic-one-regular {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(-45deg, #363535, #3a3a3a, #555555, #363535, #3a3a3a);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease-in-out infinite;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 500;
+    opacity: 0.90;
+    /* background: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); */
+    background: url('https://www.transparenttextures.com/patterns/skulls.png');
+    /* background: url('https://www.transparenttextures.com/patterns/white-diamond.png'); */
+
+    mix-blend-mode: overlay;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all ease 0.3s;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header.sticky {
+    background-color: #1e1e1e;
+    width: 100%;
+    
+    height: 70px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    filter: opacity(0.8);
+    padding: 5px;
+    width: 90%;
+    margin-top: 16px;
+    border-radius: 24px;
+}
+
+.nav-right,
+.nav-logo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-logo a img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-right>li {
+    cursor: pointer;
+}
+
+.nav-a svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.nav-a:hover svg {
+    transform: rotate(180deg);
+}
+
+.nav-a>a,
+.nav-right .nav-a a,
+.nav-right .nav-a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 42px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main>section:first-child {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.etoile1:hover {
+    animation: blink 1.2s infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.etoile2:hover {
+    animation: spin 2s linear;
+}
+
+.etoile2 {
+    width: 128px;
+    position: absolute;
+    left: 128px;
+    bottom: 200px;
+}
+
+.etoile1 {
+    width: 154px;
+    position: absolute;
+    right: 128px;
+    top: 100px;
+}
+
+.a-propos {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 110px;
+    font-family: "Dela Gothic One", sans-serif;
+    margin-bottom: 0.2em;
+    margin-top: -50px;
+}
+
+main span {
+    font-size: 42px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #fff;
+    display: block;
+    text-align: center;
+
+}
+
+main h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 44px;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-titles h1,
+.hero-titles span {
+    text-align: center;
+}
+
+
+
+
+
+
+
+.a-propos {
+    display: flex;
+    justify-content: center;
+}
+
+.a-propos-container {
+    display: flex;
+    max-width: 1100px;
+    width: 90%;
+    background: rgba(30, 30, 30, 0.85);
+    border-radius: 24px;
+    box-shadow: 0 4px 32px #0005;
+    padding: 40px 32px;
+    align-items: flex-start;
+    gap: 48px;
+    margin-top: 50px;
+}
+
+.a-propos-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.a-propos-avatar img {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #1e1e1e;
+    margin-top: 36px;
+    z-index: 900;
+    margin-left: 50px;
+}
+
+.a-propos-nom {
+    text-align: center;
+    font-size: 36px;
+    font-family: "Dela Gothic One", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+.a-propos-text {
+    flex: 1;
+    color: #fff;
+}
+
+.a-propos-text h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 36px;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.a-propos-text p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.a-propos-skills {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.a-propos-skills>div {
+    min-width: 200px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.a-propos-skills strong {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Dela Gothic One", sans-serif;
+    text-align: center;
+    margin-right: 80px;
+}
+
+
+
+
+
+.about-avec-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-avec-overlay h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* centre sur le h2 */
+    z-index: 2;
+    /* Ajoute ici la taille, le fond, etc. selon ton besoin */
+    pointer-events: none;
+}
+
+
+
+.etoile3 {
+    width: 128px;
+    position: absolute;
+    left: 64px;
+    bottom: 800;
+}
+.etoile3:hover {
+    animation: spin 2s linear;
+}
+
+
+.projets-cours-container {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.projets-cours-gauche {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.projets-cours-titre-ligne {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.projets-cours-titre-ligne h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-left: 222px;
+    white-space: nowrap;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.projets-cours-gauche p {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 18px;
+    margin-left: 128px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.projets-cours-video {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    margin-right: 64px;
+    margin-top: -420px;
+}
+
+.projets-cours-video video {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #0007;
+    object-fit: cover;
+    z-index: 900;
+}
+
+
+
+
+
+
+.projets-perso-container {
+    display: flex;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.projets-perso {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.projets-perso-titre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 22px;
+}
+
+.projets-perso-titre h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-left: 0;
+    margin-right: 64px;
+    white-space: nowrap;
+    font-family: "Dela Gothic One", sans-serif;
+    text-align: left;
+    width: 100%;
+}
+
+.projets-perso p {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 14px;
+    margin-left: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+
+.projets-perso-galerie {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 64px;
+    margin-top: 200px;
+}
+
+.projets-perso-galerie video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #0007;
+    object-fit: cover;
+    z-index: 900;
+}
+
+.etoile4 {
+    width: 128px;
+    bottom: 800;
+}
+.etoile4:hover {
+    animation: spin 2s linear;
+}
+
+
+
+
+
+
+.projets-dessin-container {
+    width: 100%;
+    padding: 80px 0;
+}
+
+.projets-dessin {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    pointer-events: none;
+}
+
+.projets-dessin-titre {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.projets-dessin-titre h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-left: 222px;
+    white-space: nowrap;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+.projets-dessin p {
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-top: 64px;
+    margin-left: 164px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+/* .projets-dessin-images img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #0007;
+    object-fit: cover;
+    z-index: 900;
+} */ 
+
+
+.projets-dessin-images {
+    display: flex;
+    width: 600px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    margin-left: 750px;
+    margin-top: -250px;
+}
+
+.card1 {
+    background-image: url('../images/peinture1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card2 {
+    background-image: url('../images/peinture2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card3 {
+    background-image: url('../images/kratos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card4 {
+    background-image: url('../images/junko.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card5 {
+    background-image: url('../images/bd2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card {
+    flex: 1;
+    height: 100%;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+    z-index: 900;
+}
+
+.card:hover {
+    flex: 4;
+}
+
+
+
+
+
+.banniere {
+    width: 100%;
+    background-color: #282727;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    padding: 28px 0 24px 0;
+    margin: 0 0 48px 0;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 24px #0002;
+    overflow: hidden; /* important pour masquer le texte hors de la bannière */
+    position: relative;
+}
+
+.banniere-marquee {
+    align-items: center;
+    padding-left: 0;
+    display: flex;
+    width: fit-content;
+    animation: defilement 18s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    z-index: 900;
+}
+
+.marquee-content span {
+    white-space: nowrap;
+    padding: 0px 25px;
+}
+
+.banniere-logo {
+    height: 72px;
+    width: auto;
+    margin: 0 18px;
+    vertical-align: middle;
+    filter: drop-shadow(0 2px 4px #0005);
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 900;   
+}
+
+.banniere-marquee img:hover {
+    transform: scale(1.15) rotate(-8deg);
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 18px;
+    transition: background 0.2s;
+}
+
+.nav-dropdown-btn:hover,
+.nav-dropdown:hover .nav-dropdown-btn {
+    background: #1e1e1e;
+    border-radius: 8px 8px 0 0;
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #1e1e1e;
+    box-shadow: 0 8px 24px #0005;
+    border-radius: 0 0 12px 12px;
+    z-index: 900;
+}
+
+.nav-dropdown-menu li {
+    list-style: none;
+}
+
+.nav-dropdown-menu li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 12px;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.nav-dropdown-menu li a:hover {
+    background: #efe7e7;
+    color: #000000;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    display: block;
+}
+
+
+
+
+.site-footer {
+    background: #1e1e1e;
+    color: #fff;
+    width: 100%;
+    padding: 24px 0;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 48px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1em;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.site-footer a:hover {
+    color: #8ec6ff;
+}
+
+
+
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 2000;
+    background: #8ec6ff;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 2em;
+    cursor: pointer;
+    box-shadow: 0 4px 16px #0005;
+    opacity: 0.8;
+    transition: opacity 0.2s, background 0.2s;
+    display: none;
+}
+#scrollTopBtn:hover {
+    background: #1e1e1e;
+    color: #8ec6ff;
+    opacity: 1;
+}
