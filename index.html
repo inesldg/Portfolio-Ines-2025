@@ -4,200 +4,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio 2025 Ledig Inès</title>
+    <title>PORTFOLIO 2026 Inès Ledig</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="images/mushroom.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="visuels/favicon/favicon.ico">
 </head>
 
 <body>
-    <header>
-        <nav class="nav-container">
-            <ul class="nav-left">
-                <li class="nav-logo"><a href="index.html"><img src="images/mushroom.ico" alt=""></a></li>
-            </ul>
-            <ul class="nav-right">
-                <li class="nav-a nav-dropdown">
-                    <span class="nav-dropdown-btn">
-                        ressources
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
-                            stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </span>
-                    <ul class="nav-dropdown-menu">
-                        <li><a href="#a-propos">À propos</a></li>
-                        <li><a href="#devweb">Développement web</a></li>
-                        <li><a href="#blender">Blender</a></li>
-                        <li><a href="#perso">Projets personnels</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </li>
+    <!-- Header pour naviguer dans le site facilement -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav_logo">Inès Ledig</div>
+            <button class="nav_burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav_menu">
+                <li><a href="#" class="nav_link">Accueil</a></li>
+                <li><a href="#about" class="nav_link">À propos</a></li>
+                <li><a href="#skills" class="nav_link">Skills</a></li>
+                <li><a href="#projets" class="nav_link">Projets</a></li>
+                <li><a href="#contact" class="nav_link">Contact</a></li>
+                <a href="visuels/pdf/CV_InèsLedig_2026.pdf" download class="nav_cv-btn">Télécharger mon CV</a>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <img class="etoile1" src="images/starz.png" alt="étoile">
-            <div class="hero-titles">
-                <h1>PORTFOLIO</h1>
-                <span>étudiante en développement web <br> 2025</span>
-            </div>
-            <img class="etoile2" src="images/star.png" alt="étoile">
-        </section>
+    <!-- Section hero -->
+    <section id="accueil" class="hero">
+        <div id="particles-js" class="hero_particles"></div>
 
-        <section id="a-propos" class="a-propos">
-            <div class="a-propos-container">
-                <div class="a-propos-avatar">
-                    <img src="images/avatar.png">
-                    <div class="a-propos-nom">
-                        <div>inès</div>
-                        <div>ledig</div>
-                    </div>
+        <div class="hero_content">
+
+            <h1 class="hero_title">
+                <span class="hero_title-white">créative,</span>
+                <span class="hero_title-white">passionnée,</span>
+                <span class="hero_title-orchidee">développeuse.</span>
+            </h1>
+
+            <p class="hero_subtitle">
+                Inès Ledig, étudiante en développement web | web design
+            </p>
+
+            <div class="hero_line"></div>
+        </div>
+
+        <a href="#about" class="hero_scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+            </svg>
+        </a>
+    </section>
+
+    <!-- Section à propos -->
+    <section id="about" class="about">
+        <div class="about_container">
+            <h2 class="about_title">
+                À propos<span class="about_dot">.</span>
+            </h2>
+
+            <!-- Contenu en deux colonnes -->
+            <div class="about_content">
+                <!-- Colonne gauche : image -->
+                <div class="about_image_container">
+                    <img src="visuels/images/character_ines.png" alt="Inès Ledig" class="about_image">
                 </div>
-                <div class="a-propos-text">
-                    <div class="about-avec-overlay">
-                        <h2>A PROPOS DE MOI</h2>
-                        <img class="about-overlay" src="images/about-overlay.png" alt="">
-                    </div>
-                    <p>
-                        Moi c’est Inès, j’ai 18 ans et j’étudie en BUT MMI à Mulhouse.<br>
-                        J’adore tout ce qui touche au développement et au design.<br>
-                        Passionnée de jeux vidéo et de création depuis toujours, <br> j’aime apprendre et explorer de
-                        nouvelles choses. <br>Mon rêve ? Travailler dans le jeu vidéo ou le web !
+
+                <!-- Colonne droite : texte -->
+                <div class="about_text">
+                    <p class="about_text-lead">
+                        Étudiante en développement web en recherche d'un stage pour l'année 2026.
                     </p>
-                    <div class="a-propos-skills">
-                        <div>
-                            <strong>Etudes</strong><br>
-                            1ère année de BUT Métiers <br> du Multimédia et de l’Internet, <br>
-                            parcours développement web
-                        </div>
-                        <div>
-                            <strong>Soft skills</strong><br>
-                            Créative, passionnée, <br> curieuse, à l’écoute,<br>
-                            rigoureuse, organisée
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="banniere">
-            <div class="banniere-marquee">
-                <div class="marquee-content">
-                    <img src="images/vs-code.png" alt="Visual Studio Code" class="banniere-logo">
-                    <img src="images/laragon.svg" alt="Laragon" class="banniere-logo">
-                    <img src="images/phpmyadmin.png" alt="phpMyAdmin" class="banniere-logo">
-                    <img src="images/blender.png" alt="Blender" class="banniere-logo">
-                    <img src="images/photoshop.png" alt="Photoshop" class="banniere-logo">
-                    <img src="images/illustrator.png" alt="Illustrator" class="banniere-logo">
-                    <span>Software skills</span>
-                </div>
-                <div class="marquee-content">
-                    <img src="images/vs-code.png" alt="Visual Studio Code" class="banniere-logo">
-                    <img src="images/laragon.svg" alt="Laragon" class="banniere-logo">
-                    <img src="images/phpmyadmin.png" alt="phpMyAdmin" class="banniere-logo">
-                    <img src="images/blender.png" alt="Blender" class="banniere-logo">
-                    <img src="images/photoshop.png" alt="Photoshop" class="banniere-logo">
-                    <img src="images/illustrator.png" alt="Illustrator" class="banniere-logo">
-                    <span>Software skills</span>
+                    <p class="about_text-paragraph">Moi c’est Inès, j’ai 19 ans et j’étudie en deuxième année de
+                        <strong>BUT MMI</strong> (Métiers du Multimédia et de
+                        l'Internet) à Mulhouse. Passionnée de jeux vidéo et de création depuis toujours, j'ai un
+                        fort intérêt pour tout ce qui touche au web et au design. À savoir : je suis très curieuse et
+                        j'aime apprendre et explorer de nouvelles choses
+                    </p>
+                    <p class="about_text-paragraph">
+                        Actuellement, mon objectif est d'apprendre et de maîtriser les compétences essentielles du
+                        développement web. J'ai de bonnes bases en <strong>HTML/CSS</strong>,
+                        <strong>JavaScript</strong>,
+                        <strong>PHP</strong> et <strong>Github</strong>.
+                    </p>
+                    <p class="about_text-paragraph">
+                        Je continue à explorer et à approfondir mes connaissances pour devenir une développeuse complète
+                        et polyvalente !
+                    </p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <section id="devweb">
-            <div class="projets-cours-container">
-                <div class="projets-cours-gauche">
-                    <img class="etoile3" src="images/star.png" alt="étoile">
-                    <div class="projets-cours-titre-ligne">
-                        <h2>Projets de cours - développement web</h2>
+    <!-- Section skills -->
+    <section id="skills" class="skills">
+        <div class="skills_container">
+            <h2 class="skills_title">
+                Skills<span class="skills_dot">.</span>
+            </h2>
+
+            <!-- Contenu en deux colonnes -->
+            <div class="skills_content">
+                <div class="skills_list">
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/html.png" alt="HTML"></div>
+                        <span class="skills_name">HTML | Structure, sémantique</span>
                     </div>
-                    <p>
-                        J’ai eu l’occasion de développer 2 sites <br> web cette année avec des langages de <br>
-                        programmation
-                        front (HTML, CSS, JavaScript) <br> et back (PHP, MySQL).<br>
-                        J’ai pu créer et gérer une base de donnée <br> pour mon dernier site web dont le but est <br>
-                        d’enregistrer des jeux vidéo dans sa <br> bibliothèque personnelle, à la manière de <br>
-                        letterboxd.
-                        J’ai pu apprendre à gérer les erreurs <br> sans stresser, réfléchir, observer, et surtout être
-                        <br>
-                        organisée. Au final le développement web <br> s’est révélé être une passion pour moi !
-                    </p>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/css.png" alt="CSS"></div>
+                        <span class="skills_name">CSS | Flexbox & Grid, Keyframes, Responsive</span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/js.png" alt="JavaScript"></div>
+                        <span class="skills_name">JavaScript | Interactivité, Fonctions</span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/php.png" alt="PHP"></div>
+                        <span class="skills_name">PHP | Backend, Site Dynamique</span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/sql.png" alt="MySQL"></div>
+                        <span class="skills_name">MySQL | Requêtes, Interaction avec la base de donnée</span>
+                    </div>
                 </div>
-                <div class="projets-cours-video">
-                    <video autoplay loop muted src="images/website-video.mp4"></video>
+
+                <div class="skills_list">
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/github.png" alt="Github"></div>
+                        <span class="skills_name">Github | Coder en équipe, Partager ses travaux, Contribuer </span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/figma.png" alt="Figma"></div>
+                        <span class="skills_name">Figma | UI / UX Design, Wireframe, Maquettes, Arborescences</span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/wp.png" alt="Wordpress"></div>
+                        <span class="skills_name">Wordpress | Maîtrise du CMS</span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/laragon.png" alt="Laragon"></div>
+                        <span class="skills_name">Laragon | Base de données, site web</span>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_icon"><img src="visuels/images/illustrator.png" alt="Illustrator"></div>
+                        <span class="skills_name">Illustrator | Designs, Mockups, Charte Graphique</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="blender">
-            <div class="projets-perso-container">
-                <div class="projets-perso-galerie">
-                    <video autoplay loop muted src="images/blender.mp4"></video>
-                </div>
-                <div class="projets-perso">
-                    <div class="projets-perso-titre">
-                        <img class="etoile4" src="images/star.png" alt="étoile">
-                        <h2>Projets personnels - BLENDER</h2>
+    <!-- Section projets -->
+    <section id="projets" class="projets">
+        <div class="projets_container">
+            <h2 class="projets_title">
+                Projets<span class="projets_title-dot">.</span>
+            </h2>
+
+            <div class="projets_screen">
+                <!-- Barre de titre VS Code (Style Windows/Linux) -->
+                <div class="projets_vscode-header">
+                    <div class="projets_vscode-title">Visual Studio Code</div>
+                    <div class="projets_vscode-controls">
+                        <button class="projets_control projets_control--minimize"></button>
+                        <button class="projets_control projets_control--maximize"></button>
+                        <button class="projets_control projets_control--close"></button>
                     </div>
-                    <p>
-                        Durant l’été 2024 j’ai commencé à <br> m’intéresser au logiciel Blender, avec lequel <br> j’ai
-                        réalisée
-                        quelques projets personnels <br> (modélisation d’objets). J'ai commencée<br> il y a peu à
-                        apprendre
-                        l’animation 3D <br> pour un projet de cours (dé qui roule). <br> Ce qui me plaît dans la
-                        modélisation 3D <br>
-                        c'est le fait de pouvoir "donner vie" à son <br> imagination, de pouvoir recréer des objets<br>
-                        de la vie de tous les jours et pouvoir les <br> animer comme on le souhaite.
-                    </p>
+                </div>
+
+                <!-- Interface VS Code -->
+                <div class="projets_vscode-body">
+                    <!-- Arborescence à gauche -->
+                    <div class="projets_sidebar">
+                        <div class="projets_explorer-title">EXPLORER</div>
+                        <div class="projets_folder-list">
+                            <div class="projets_folder" data-project="projet1">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Projet data & charts</span>
+                            </div>
+                            <div class="projets_folder" data-project="projet2">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Projet Ruches Connectées</span>
+                            </div>
+                            <div class="projets_folder" data-project="projet3">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Maquette Article Web</span>
+                            </div>
+                            <div class="projets_folder" data-project="projet4">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Maquette Design UI/UX</span>
+                            </div>
+                            <div class="projets_folder" data-project="projet5">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Premier Site Dynamique</span>
+                            </div>
+                            <div class="projets_folder" data-project="projet6">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Animation Blender Logo</span>
+                            </div>
+                            <div class="projets_folder" data-project="projet7">
+                                <span class="projets_folder-icon">📁</span>
+                                <span class="projets_folder-name">Design Newsletter Nintendo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zone principale (contenu du projet) -->
+                    <div class="projets_main">
+                        <div class="projets_tabs">
+                            <div class="projets_tab projets_tab-active">
+                                <span class="projets_tab-name">Sélectionnez un projet</span>
+                                <span class="projets_tab-close">x</span>
+                            </div>
+                        </div>
+                        <div class="projets_content">
+                            <div class="projets_placeholder">
+                                <p>Cliquez sur un dossier pour voir le projet</p>
+                            </div>
+                            <!-- Le contenu du projet sera injecté ici par JavaScript -->
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="perso">
-            <div class="projets-dessin-container">
-                <div class="projets-dessin">
-                    <img class="etoile3" src="images/star.png" alt="étoile">
-                    <div class="projets-dessin-titre">
-                        <h2>Projets personnels - dessins</h2>
+    <!-- Bouton pour retourner en haut -->
+    <a href="#" class="back-to-top" aria-label="Retour en haut">
+        <svg class="back-to-top_arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </a>
+
+    <!-- Footer (contact) -->
+    <footer id="contact" class="contact">
+        <div class="contact_container">
+            <h2 class="contact_title">
+                Contact.
+            </h2>
+
+            <p class="contact_subtitle">
+                Contactez-moi ou suivez mes réseaux sociaux !
+            </p>
+
+            <div class="contact_grid">
+                <a href="https://www.linkedin.com/in/ines-ledig/" target="_blank" class="contact_card">
+                    <div class="contact_card-content">
+                        <div class="contact_card-icon">in</div>
+                        <span class="contact_card-name">LinkedIn</span>
+                        <span class="contact_card-arrow">↗</span>
                     </div>
-                    <p>
-                        Durant mon temps libre je passe beaucoup <br> de temps à créer et à imaginer, j’aime <br>
-                        beaucoup dessiner.
-                        Voici quelques unes de mes <br> créations avec différentes méthodes <br> (crayon, graphite,
-                        peinture, bd...)
-                    </p>
-                </div>
-                <div class="projets-dessin-images">
-                    <div class="card card1"></div>
-                    <div class="card card2"></div>
-                    <div class="card card3"></div>
-                    <div class="card card4"></div>
-                    <div class="card card5"></div>
-                </div>
+                </a>
+
+                <a href="https://github.com/inesldg" target="_blank" class="contact_card">
+                    <div class="contact_card-content">
+                        <div class="contact_card-icon">gh</div>
+                        <span class="contact_card-name">GitHub</span>
+                        <span class="contact_card-arrow">↗</span>
+                    </div>
+                </a>
+
+                <a href="mailto:ledig.ines@gmail.com" class="contact_card">
+                    <div class="contact_card-content">
+                        <div class="contact_card-icon">@</div>
+                        <span class="contact_card-name">E-mail</span>
+                        <span class="contact_card-arrow">↗</span>
+                    </div>
+                </a>
+
+                <a href="visuels/pdf/CV_InèsLedig_2026.pdf" download class="contact_card">
+                    <div class="contact_card-content">
+                        <div class="contact_card-icon">cv</div>
+                        <span class="contact_card-name">Télécharger mon CV</span>
+                        <span class="contact_card-arrow">↗</span>
+                    </div>
+                </a>
             </div>
-        </section>
 
-
-
-
-    </main>
-
-    <footer id="contact" class="site-footer">
-        <div class="footer-content">
-            <span>Contact :</span>
-            <a href="mailto:ledig.ines@gmail.com">ledig.ines@gmail.com</a>
-            <span>|</span>
-            <a href="https://www.linkedin.com/in/ines-ledig" target="_blank">LinkedIn</a>
-            <span>|</span>
-            <a href="https://github.com/inesldg" target="_blank">GitHub</a>
+            <p class="contact_copyright">
+                ©2026 | Inès Ledig
+            </p>
         </div>
     </footer>
 
-    <button id="scrollTopBtn" title="Remonter en haut">&#8679;</button>
-
-
+    <!-- Scripts : particles.js doit être chargé avant notre script -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

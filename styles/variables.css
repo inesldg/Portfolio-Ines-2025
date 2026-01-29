@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Police */
+    --font: "Poppins";
+
+    /* Palette 1 */
+    --marron-dark: #161212;
+    --brun-rose: #8c6a73;
+    --orchidee: #dc5ccb;
+
+    /* Palette 2 */
+    --noir: #0b0e11;
+    --bleu: #3a4f7a;
+    --orchidee: #dc5ccb;
+
+    /* Palette 3 */
+    /* --noir: #0f0f14;
+    --gris-clair: #b8b5c0;
+    --orchidee: #dc5ccb; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: #ffffff;
+    background-color: var(--noir, #0f0f14);
+    overflow-x: hidden;
+}
