@@ -878,6 +878,26 @@
     margin-top: 2rem;
 }
 
+/* Animation d'agrandissement au scroll pour la section Projets */
+.projets_container {
+    transition: max-width 0.5s ease, padding 0.5s ease;
+}
+
+.projets.is-fullscreen .projets_container {
+    max-width: 98vw; /* S'élargit presque jusqu'aux bords de l'écran */
+}
+
+.projets.is-fullscreen .projets_screen {
+    min-height: 85vh; /* Augmente la hauteur de l'éditeur VS Code */
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.7);
+}
+
+.projets.is-fullscreen .projets_preview-container,
+.projets.is-fullscreen .projets_embed,
+.projets.is-fullscreen .projets_embed-iframe {
+    min-height: 65vh; /* Agrandit la zone d'affichage (iframe, vidéo, image) */
+}
+
 /* ============================================
    RESPONSIVE (Mobile)
    ============================================ */
