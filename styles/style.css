@@ -312,7 +312,7 @@
     font-weight: 400;
     line-height: 1.8;
 }
- 
+
 .about_text-paragraph strong {
     font-weight: 700;
     color: var(--orchidee);
@@ -436,6 +436,9 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    min-height: 750px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Barre de titre VS Code (Style Windows/Linux) */
@@ -498,7 +501,8 @@
 /* Corps de VS Code */
 .projets_vscode-body {
     display: flex;
-    height: 600px;
+    flex: 1;
+    min-height: 700px;
 }
 
 /* Sidebar (arborescence) */
@@ -597,39 +601,75 @@
 /* Contenu du projet */
 .projets_content {
     flex: 1;
-    overflow: auto;
-    padding: 2rem;
+    overflow-y: auto;
+    padding: 1.5rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .projets_placeholder {
+    margin: auto;
     text-align: center;
     color: #858585;
     font-size: 1rem;
 }
 
-.projets_content img,
-.projets_content video,
-.projets_content iframe {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 4px;
+/* En-tête de détails du projet (Description & Apports) */
+.projets_details-header {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #cccccc;
 }
 
-.projets_content iframe {
+.projets_details-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--orchidee);
+    margin-bottom: 0.8rem;
+}
+
+.projets_details-desc,
+.projets_details-takeaway {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.projets_details-desc:last-child,
+.projets_details-takeaway:last-child {
+    margin-bottom: 0;
+}
+
+.projets_details-desc strong,
+.projets_details-takeaway strong {
+    color: var(--orchidee);
+}
+
+/* Zone de prévisualisation agrandie */
+.projets_preview-container {
+    flex: 1;
+    min-height: 550px;
     width: 100%;
-    height: 500px;
-    border: none;
+    display: flex;
 }
 
-/* Loader / écran de chargement pour embeds (Figma, sites, PDF) */
+.projets_preview-container video,
+.projets_preview-container img {
+    width: 100%;
+    height: 100%;
+    max-height: 650px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
 .projets_embed {
     position: relative;
     width: 100%;
-    height: 500px;
-    max-width: 100%;
+    height: 100%;
+    min-height: 550px;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -637,6 +677,7 @@
 .projets_embed-iframe {
     width: 100%;
     height: 100%;
+    min-height: 550px;
     border: none;
     display: block;
     opacity: 0;
@@ -1015,6 +1056,10 @@
         margin-bottom: 2rem;
     }
 
+    .projets_screen {
+        min-height: auto;
+    }
+
     .projets_vscode-body {
         flex-direction: column;
         height: auto;
@@ -1054,15 +1099,15 @@
 
     .projets_content {
         padding: 1rem;
+    }
+
+    .projets_preview-container,
+    .projets_embed {
         min-height: 350px;
     }
 
-    .projets_content iframe {
-        height: 400px;
-    }
-
-    .projets_embed {
-        height: 400px;
+    .projets_embed-iframe {
+        min-height: 350px;
     }
 
     /* Bouton retour en haut */
@@ -1157,15 +1202,15 @@
 
     .projets_content {
         padding: 0.75rem;
+    }
+
+    .projets_preview-container,
+    .projets_embed {
         min-height: 300px;
     }
 
-    .projets_content iframe {
-        height: 350px;
-    }
-
-    .projets_embed {
-        height: 350px;
+    .projets_embed-iframe {
+        min-height: 300px;
     }
 
     .contact_card {
@@ -1176,4 +1221,3 @@
         font-size: 0.9rem;
     }
 }
-
